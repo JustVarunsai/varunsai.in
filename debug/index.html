@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A debug archive from Varun Sai: mistakes, broken assumptions, fixes, and postmortems worth keeping."
+    />
+    <title>Debug | Varun Sai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header" data-reveal>
+        <a class="brand" href="../">
+          <span class="brand-mark">VS</span>
+          <span class="brand-text">Varun Sai</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="../">Home</a>
+          <a href="../notes/">Notes</a>
+          <a href="../builds/">Builds</a>
+          <a href="../newsletter/">Letters</a>
+          <a href="https://www.linkedin.com/in/varunsaibandi/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="page-intro" data-reveal>
+          <p class="eyebrow">/debug</p>
+          <h1>Where broken assumptions become <span class="serif">useful records</span>.</h1>
+          <p>
+            I want a place for the things that did not work first: debugging trails, failures that
+            taught something real, fixes that changed the architecture, and the notes that prevent
+            the same mistake from returning dressed as a new one.
+          </p>
+          <div class="note-row">
+            <span class="note-pill">postmortems</span>
+            <span class="note-pill">fixes</span>
+            <span class="note-pill">receipts</span>
+          </div>
+        </section>
+
+        <section class="subpage-layout" data-reveal>
+          <article class="detail-card">
+            <h2>What will show up here</h2>
+            <ul>
+              <li>Postmortems that explain what broke, why it broke, and what changed after.</li>
+              <li>Debug notes from AI workflows, infrastructure, deployment paths, and product logic.</li>
+              <li>Useful fixes that should stay visible instead of being buried inside old commits.</li>
+            </ul>
+          </article>
+
+          <article class="detail-card">
+            <h3>Why keep the messy parts</h3>
+            <p>
+              Debug history is often more educational than the polished launch note. This page is
+              meant to keep the learning visible, not just the final screenshot.
+            </p>
+            <div class="closing-links">
+              <a href="../">Back home</a>
+              <a href="../builds/">See builds</a>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span data-year></span> Varun Sai. The fix matters more when the cause stays visible.</p>
+      </footer>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
