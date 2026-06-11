@@ -25,29 +25,60 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
-const rotatingWord = document.querySelector("[data-rotate]");
-
-if (rotatingWord) {
-  const words = rotatingWord.dataset.words
-    .split("|")
-    .map((word) => word.trim())
-    .filter(Boolean);
-
-  let wordIndex = 0;
-
-  window.setInterval(() => {
-    wordIndex = (wordIndex + 1) % words.length;
-    rotatingWord.style.opacity = "0.18";
-
-    window.setTimeout(() => {
-      rotatingWord.textContent = words[wordIndex];
-      rotatingWord.style.opacity = "1";
-    }, 180);
-  }, 2600);
-}
-
 const yearTarget = document.querySelector("[data-year]");
 
 if (yearTarget) {
   yearTarget.textContent = new Date().getFullYear().toString();
 }
+
+const interactiveElements = document.querySelectorAll(
+  ".brand, .site-nav a, .button, .path-card, .closing-links a, .inline-link",
+);
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+let audioContext;
+
+function playInterfaceTone() {
+  if (!AudioContextClass || prefersReducedMotion.matches) {
+    return;
+  }
+
+  audioContext ??= new AudioContextClass();
+
+  if (audioContext.state === "suspended") {
+    audioContext.resume();
+  }
+
+  const now = audioContext.currentTime;
+  const gainNode = audioContext.createGain();
+  const lowerOscillator = audioContext.createOscillator();
+  const upperOscillator = audioContext.createOscillator();
+
+  lowerOscillator.type = "sine";
+  upperOscillator.type = "triangle";
+  lowerOscillator.frequency.setValueAtTime(392, now);
+  upperOscillator.frequency.setValueAtTime(587.33, now);
+
+  gainNode.gain.setValueAtTime(0.0001, now);
+  gainNode.gain.exponentialRampToValueAtTime(0.018, now + 0.01);
+  gainNode.gain.exponentialRampToValueAtTime(0.0001, now + 0.15);
+
+  lowerOscillator.connect(gainNode);
+  upperOscillator.connect(gainNode);
+  gainNode.connect(audioContext.destination);
+
+  lowerOscillator.start(now);
+  upperOscillator.start(now);
+  lowerOscillator.stop(now + 0.16);
+  upperOscillator.stop(now + 0.14);
+}
+
+interactiveElements.forEach((element) => {
+  element.addEventListener("pointerdown", playInterfaceTone, { passive: true });
+  element.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      playInterfaceTone();
+    }
+  });
+});
