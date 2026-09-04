@@ -3,318 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Varun Sai builds AI systems, cloud tools, and public notes about what survives building, breaking, and debugging."
-    />
-    <meta name="theme-color" content="#f4eee4" />
-    <title>Varun Sai | AI Engineer</title>
+    <meta name="description" content="Varun Sai is an AI engineer and software builder who turns real product needs into useful, considered software." />
+    <meta name="theme-color" content="#f5f1e8" />
+    <title>Varun Sai | AI engineer &amp; software builder</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="refinements.css" />
   </head>
   <body class="page-home">
+    <a class="skip-link" href="#main">Skip to the good part</a>
     <div class="site-shell">
-      <header class="site-header" data-reveal>
-        <a class="brand" href="index.html" aria-label="Varun Sai home">
-          <span class="brand-text">Varun Sai</span>
-          <span class="brand-subtitle">AI engineer • software developer</span>
-        </a>
-
+      <header class="site-header">
+        <a class="wordmark" href="./" aria-label="Varun Sai home">varun<br />sai<span>.</span></a>
+        <p class="header-note">AI engineering with<br />product intent</p>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="#paths">Map</a>
-          <a href="#collaborate">Collaborate</a>
-          <a href="notes/">Notes</a>
-          <a href="builds/">Builds</a>
-          <a href="newsletter/">Letters</a>
-          <a href="debug/">Debug</a>
-          <a href="https://www.linkedin.com/in/varunsaibandi/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="#notes">Notes</a>
+          <a href="#photos">Photo roll</a>
+          <a href="#hello">Say hello</a>
         </nav>
       </header>
 
-      <main>
-        <section class="hero" data-reveal>
+      <main id="main">
+        <section class="hero">
+          <div class="hero-index" aria-hidden="true"><span>01</span><i></i><span>2026</span></div>
           <div class="hero-copy">
-            <p class="eyebrow">Varun Sai · AI engineer · software developer</p>
-            <h1>I build AI systems that <span class="serif">survive the demo</span>.</h1>
-            <p class="lede">
-              I work across cloud infrastructure, software, agent workflows, and the product
-              decisions around them. VarunSai.in is where I keep the useful parts visible: what I
-              built, what I learned, what broke, and what became worth writing down. Over time,
-              this grows into notes, letters, project rooms, and a clean starting point for people
-              building something serious with AI.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#paths">See the structure</a>
-              <a class="button button-secondary" href="#collaborate">Start a conversation</a>
-            </div>
-
-            <div class="signal-row" aria-label="Signals">
-              <span>Cloud-first</span>
-              <span>Agent workflows</span>
-              <span>Human in the loop</span>
-              <span>Tea before hype</span>
-            </div>
+            <p class="eyebrow">Varun Sai · AI engineer / software builder</p>
+            <h1>I turn real needs<br />into <em>useful software.</em></h1>
+            <p class="hero-intro">I design and build AI-enabled products from the problem outward: clarify the need, choose the smallest useful system, and refine the product around how people will use it. These are the notes behind that work.</p>
+            <a class="solid-link" href="#notes">Read the build notes</a>
           </div>
-
-          <aside class="hero-panel">
-            <div class="panel-card panel-card-notes">
-              <p class="panel-label">Basecamp status</p>
-              <div class="panel-stack">
-                <div>
-                  <span>Now</span>
-                  <strong>A calm first edition of the site.</strong>
-                </div>
-                <div>
-                  <span>Next</span>
-                  <strong>Project pages, letters, stronger build logs, and cleaner archives.</strong>
-                </div>
-                <div>
-                  <span>Principle</span>
-                  <strong>Useful beats noisy. Clear beats clever.</strong>
-                </div>
-              </div>
-            </div>
-
-            <div class="panel-card constellation-card" aria-label="Site map">
-              <p class="panel-label">How it scales</p>
-              <div class="constellation">
-                <div class="cloud cloud-one"></div>
-                <div class="cloud cloud-two"></div>
-                <div class="cloud cloud-three"></div>
-                <div class="node node-center">varunsai.in</div>
-                <div class="node node-top">notes</div>
-                <div class="node node-right">builds</div>
-                <div class="node node-bottom">letters</div>
-                <div class="node node-left">debug</div>
-              </div>
-            </div>
+          <aside class="hero-card">
+            <div class="hero-card-top"><span>WORKING PRINCIPLE</span><span>01</span></div>
+            <p class="scribble">Start with the need.<br />Build the smallest useful system.<br />Keep improving it.</p>
+            <p class="hero-card-foot">Product intent before feature count.</p>
           </aside>
         </section>
 
-        <section class="note-band" data-reveal>
-          <p>
-            Not just a homepage. The beginning of a library, a build log, a letter archive, and a
-            better way to show how the work actually gets made.
-          </p>
+        <section class="welcome-note" aria-label="A note from the site">
+          <span class="note-stamp">PS</span>
+          <p>Here you will find the reasoning behind the work: product questions, technical choices, experiments, and what changed after the first version.</p>
+          <span class="note-date">AUG 2026</span>
         </section>
 
-        <section class="manifesto" data-reveal>
-          <div class="section-heading">
-            <p class="eyebrow">Approach</p>
-            <h2>A home for the work, not just the announcement.</h2>
-          </div>
-          <p class="manifesto-copy">
-            The interesting part of AI engineering is rarely the screenshot. It is the structure
-            behind it: the choices, the constraints, the debug trail, the cloud decisions, and the
-            taste required to keep the whole thing human on the other side. That is the layer I
-            want to publish here.
-          </p>
-        </section>
-
-        <section class="paths" id="paths" data-reveal>
-          <div class="section-heading">
-            <p class="eyebrow">What lives here</p>
-            <h2>This starts simple, but it is not meant to stay small.</h2>
-          </div>
-
-          <div class="card-grid">
-            <a class="path-card" href="notes/">
-              <div class="path-card-top">
-                <span class="path-badge">Live now</span>
-                <span class="path-link">/notes</span>
-              </div>
-              <h3>Working Notes</h3>
-              <p>
-                Working notes, architecture fragments, references, and half-formed ideas worth
-                keeping close.
-              </p>
-            </a>
-
-            <a class="path-card" href="builds/">
-              <div class="path-card-top">
-                <span class="path-badge">Live now</span>
-                <span class="path-link">/builds</span>
-              </div>
-              <h3>Build Log</h3>
-              <p>
-                Projects, tools, and systems that made it past the first sketch and earned a
-                cleaner explanation.
-              </p>
-            </a>
-
-            <a class="path-card" href="newsletter/">
-              <div class="path-card-top">
-                <span class="path-badge path-badge-soft">Warming up</span>
-                <span class="path-link">/newsletter</span>
-              </div>
-              <h3>Letters</h3>
-              <p>
-                Longer writing on AI engineering, product judgment, cloud decisions, and the
-                people around the tools.
-              </p>
-            </a>
-
-            <a class="path-card" href="debug/">
-              <div class="path-card-top">
-                <span class="path-badge path-badge-soft">Warming up</span>
-                <span class="path-link">/debug</span>
-              </div>
-              <h3>Debug Archive</h3>
-              <p>
-                Postmortems, repair notes, and the causes behind fixes that should stay visible.
-              </p>
-            </a>
-          </div>
-        </section>
-
-        <section class="perspective-grid" data-reveal>
-          <article class="perspective-card">
-            <p class="card-label">What I build</p>
-            <h3>AI products, agent systems, and the infrastructure beneath them.</h3>
-            <p>
-              I like work where software, product thinking, and cloud architecture have to agree
-              with each other instead of taking turns pretending to matter most.
-            </p>
-          </article>
-
-          <article class="perspective-card">
-            <p class="card-label">What I believe</p>
-            <h3>The model is not the whole product.</h3>
-            <p>
-              Reliability, interface, guardrails, handoffs, writing, and judgment matter just as
-              much as the intelligence inside the system. Sometimes more.
-            </p>
-          </article>
-
-          <article class="perspective-card">
-            <p class="card-label">What stays personal</p>
-            <h3>Good taste is part of the build.</h3>
-            <p>
-              So is honesty. Tea still outranks coffee, and if something is not solved yet, it
-              should not be dressed up like it is.
-            </p>
-          </article>
-        </section>
-
-        <section class="references-section" data-reveal>
-          <div class="section-heading">
-            <p class="eyebrow">Signals</p>
-            <h2>Some work I keep nearby while building my own.</h2>
-          </div>
-
-          <div class="service-grid">
-            <article class="detail-card">
-              <p class="card-label">Reference shelf</p>
-              <h3>lil-agents</h3>
-              <p>
-                Ryan Stephen’s
-                <a
-                  class="inline-link"
-                  href="https://github.com/ryanstephen/lil-agents.git"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  lil-agents
-                </a>
-                is the kind of repo I like to keep open: small, readable, and not trying too hard
-                to look important. It is a good reminder that agent systems can stay simple and
-                still be sharp.
-              </p>
-              <div class="closing-links">
-                <a
-                  href="https://github.com/ryanstephen/lil-agents.git"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Open repository
-                </a>
-              </div>
+        <section class="notes-section" id="notes">
+          <div class="section-intro"><p class="eyebrow">Build notes</p><h2>The work is more than the final screen.</h2></div>
+          <div class="note-layout">
+            <article class="feature-note">
+              <p class="note-number">01 / DECISIONS, NOT DECORATION</p>
+              <h3>Each note records the problem, the trade-off, and what the next version should do better.</h3>
+              <p>I write down the parts that shape a product: what a user needs, where an AI workflow helps, what makes a system reliable, and why a simpler direction sometimes wins.</p>
+              <a class="underlined-link" href="notes/">Explore the notes</a>
             </article>
-
-            <article class="detail-card">
-              <p class="card-label">Direction</p>
-              <h3>What I want this site to become</h3>
-              <p>
-                A growing body of work around notes, builds, letters, and debug trails, with
-                enough clarity that someone new can understand both the result and the reasoning
-                behind it.
-              </p>
-            </article>
+            <div class="note-aside">
+              <article class="small-note small-note-yellow"><p>Good software begins with a real problem, not a feature list.</p><span>PRODUCT FIRST.</span></article>
+              <article class="small-note small-note-blue"><p>AI earns its place when it makes the next action clearer.</p><span>USEFUL, NOT NOISY.</span></article>
+            </div>
           </div>
         </section>
 
-        <section class="collaborate-section" id="collaborate" data-reveal>
-          <div class="section-heading">
-            <p class="eyebrow">Collaborate</p>
-            <h2>If you are building with AI, I can help give it shape.</h2>
-          </div>
-          <p class="manifesto-copy">
-            Sometimes the first version needs a builder. Sometimes the hard part is deciding what
-            the workflow should be, where the product boundary belongs, or when a human should stay
-            in the loop. I like that layer of the work, and I like taking it all the way to a
-            solid rollout.
-          </p>
+        <section class="sidekick-section" aria-labelledby="sidekick-title">
+          <div class="sidekick-mark" aria-hidden="true"><span></span><span></span></div>
+          <div class="sidekick-copy"><p class="eyebrow" id="sidekick-title">A tiny thought passing through</p><p class="sidekick-thought" data-sidekick-thought lang="en">New visitor detected. I have made the tea look busy.</p></div>
+          <button class="thought-button" type="button" data-sidekick-next>Refresh thought</button>
+        </section>
 
-          <div class="service-grid">
-            <article class="detail-card">
-              <h3>Where I can step in</h3>
-              <ul>
-                <li>Turn a rough AI idea into a buildable scope, workflow, or product direction.</li>
-                <li>Prototype or ship agent workflows, internal tools, and AI product features.</li>
-                <li>Help with cloud setup, deployment paths, cleanup, iteration, and the messy middle.</li>
-              </ul>
-            </article>
-
-            <article class="detail-card">
-              <h3>How I like to work</h3>
-              <p>
-                Collaboratively, honestly, and all the way through. I prefer useful first versions
-                over inflated promises, and I stay interested after launch when the real behavior
-                starts showing up.
-              </p>
-              <div class="closing-links">
-                <a
-                  href="https://www.linkedin.com/in/varunsaibandi/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Start on LinkedIn
-                </a>
+        <section class="photo-section" id="photos" data-motion="rise">
+          <div class="section-intro photo-heading"><p class="eyebrow">The parts that don’t fit in a résumé</p><h2>Things I saw,<br />things I liked.</h2><p>A small record of days, places, food, and the person doing the building.</p></div>
+          <div class="gallery-wrap">
+            <div class="gallery-guide"><span>Photo stack · click an edge or scroll sideways</span><span data-gallery-count>01 / 05</span></div>
+            <div class="gallery-story" data-gallery-story>
+              <div class="photo-board" tabindex="0" aria-label="A scrollable gallery of Varun's photos">
+                <figure class="photo-frame"><img src="assets/gallery/charminar.jpg" alt="Charminar framed against a bright blue sky" loading="eager" /><figcaption><span>01</span> Hyderabad, in full view <em>city</em></figcaption></figure>
+                <figure class="photo-frame portrait-frame"><img src="assets/gallery/varun-portrait.jpg" alt="Varun taking a mirror selfie in sunglasses and a blue patterned shirt" loading="lazy" /><figcaption><span>02</span> The person behind the notes <em>portrait</em></figcaption></figure>
+                <figure class="photo-frame"><img src="assets/gallery/breakfast.jpg" alt="A South Indian breakfast served on a banana leaf" loading="lazy" /><figcaption><span>03</span> A good beginning <em>breakfast</em></figcaption></figure>
+                <figure class="photo-frame"><img src="assets/gallery/desk-robot.jpg" alt="A small robot beside a laptop and compact desktop computer" loading="lazy" /><figcaption><span>04</span> The workroom has company <em>desk</em></figcaption></figure>
+                <figure class="photo-frame"><img src="assets/gallery/dinner.jpg" alt="A dinner table with pasta, red accents, and café light" loading="lazy" /><figcaption><span>05</span> A table worth remembering <em>dinner</em></figcaption></figure>
               </div>
-            </article>
+              <button class="gallery-hit gallery-hit-prev" type="button" data-gallery-prev aria-label="Show previous photo"></button>
+              <button class="gallery-hit gallery-hit-next" type="button" data-gallery-next aria-label="Show next photo"></button>
+            </div>
           </div>
         </section>
 
-        <section class="closing-panel" data-reveal>
-          <div>
-            <p class="eyebrow">From here</p>
-            <h2>A calm starting point. A larger body of work on the way.</h2>
+        <section class="sound-section" aria-labelledby="sound-title">
+          <div class="sound-copy"><p class="eyebrow">A small audio corner</p><h2 id="sound-title">One song<br />for this page.</h2><p>It stays quiet until you ask it to play.</p></div>
+          <div class="record-sleeve">
+            <div class="sleeve-label"><span>NOW PLAYING</span><strong>A track picked by Varun</strong><small>Open it when the moment feels right.</small></div>
+            <div class="record-disc" aria-hidden="true"><i></i></div>
+            <button class="play-song" type="button" data-spotify-launch aria-expanded="false"><span aria-hidden="true">▶</span> Play from the beginning</button>
           </div>
-          <p>
-            For now, it is a homepage. Soon, it becomes a sharper archive of what I build, what I
-            learn, and who I work with.
-          </p>
-          <div class="closing-links">
-            <a href="https://www.linkedin.com/in/varunsaibandi/" target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-            <a href="notes/">Read the notes</a>
-            <a href="builds/">See the build log</a>
-          </div>
+        </section>
+
+        <section class="about-section">
+          <div class="about-mark" aria-hidden="true">VS</div>
+          <div><p class="eyebrow">How I work</p><h2>Product-minded engineering, with AI where it removes friction.</h2></div>
+          <div class="about-body"><p>I work across problem framing, AI workflows, software prototypes, and the interfaces around them. I care about whether a thing should exist, not only whether it can be built.</p><p>The goal is straightforward: make technology feel clear, useful, and worth returning to.</p></div>
+        </section>
+
+        <section class="contact-section" id="hello">
+          <p class="eyebrow">Let’s talk</p>
+          <h2>Have a problem worth simplifying?</h2>
+          <p>I am interested in thoughtful AI products, useful internal tools, and software that needs a clearer path from idea to use.</p>
+          <div class="contact-actions"><a class="solid-link" href="https://www.linkedin.com/in/varunsaibandi/" target="_blank" rel="noreferrer">Find me on LinkedIn</a><a class="underlined-link" href="https://github.com/JustVarunsai" target="_blank" rel="noreferrer">GitHub</a></div>
         </section>
       </main>
-
-      <footer class="site-footer">
-        <p>© <span data-year></span> Varun Sai. Built for curious systems and honest notes.</p>
-      </footer>
+      <footer class="site-footer"><span>© <span data-year></span> Varun Sai</span><span>Made slowly, on purpose.</span></footer>
     </div>
-
+    <aside class="agent-dock" aria-label="A small site companion">
+      <div class="agent-orb" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p data-agent-status>Doing a very small amount of productive-looking activity.</p>
+      <button type="button" data-sidekick-next aria-label="Show another small thought">↻</button>
+    </aside>
+    <aside class="player-dock" data-player-dock aria-label="Spotify player" hidden>
+      <div class="player-dock-head"><span><i></i> audio corner</span><button type="button" data-player-minimize aria-label="Minimize player">−</button></div>
+      <div class="spotify-mount" data-spotify-mount></div>
+      <button class="player-restore" type="button" data-player-restore hidden>♫</button>
+    </aside>
     <script src="script.js"></script>
   </body>
 </html>

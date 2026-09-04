@@ -1,0 +1,127 @@
+/* Final interaction polish kept separate from the archive stylesheet. */
+.paper-clip { display: none; }
+
+/* The persistent helper begins as a quiet orb and reveals its copy on intent. */
+.agent-dock p { visibility: hidden; }
+.agent-dock:hover p,
+.agent-dock:focus-within p { visibility: visible; }
+
+/* Keep the accessibility skip link out of visual captures until keyboard focus. */
+.skip-link:not(:focus) { visibility: hidden; }
+
+/* A layered photo deck replaces the conventional horizontal carousel. */
+.photo-section .gallery-wrap {
+  width: min(100%, 55rem);
+  margin-left: auto;
+}
+
+.photo-board {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: clamp(32rem, 58vw, 50rem);
+  overflow: visible;
+  padding: 0;
+  scrollbar-width: none;
+}
+
+.photo-board::-webkit-scrollbar { display: none; }
+
+.photo-board .photo-frame,
+.photo-board .photo-frame-one,
+.photo-board .photo-frame-three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: clamp(19rem, 44vw, 37rem);
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: 16% 90%;
+  will-change: transform, opacity;
+  transition: transform 680ms cubic-bezier(.16,1,.3,1), opacity 480ms ease, box-shadow 360ms ease, filter 440ms ease;
+}
+
+.photo-board .photo-frame.is-current {
+  z-index: 5;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(0, 0) rotate(-1.4deg);
+}
+
+.photo-board .photo-frame.is-next {
+  z-index: 4;
+  opacity: 1;
+  filter: saturate(.78) brightness(.98);
+  transform: translate(4.2rem, 1.6rem) rotate(3deg) scale(.985);
+}
+
+.photo-board .photo-frame.is-peek {
+  z-index: 3;
+  opacity: .92;
+  filter: saturate(.68) brightness(.96);
+  transform: translate(7.7rem, 3.6rem) rotate(5.5deg) scale(.96);
+}
+
+.photo-board .photo-frame.is-back {
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-5rem, 2rem) rotate(-5deg) scale(.9);
+}
+
+.photo-board .photo-frame.is-current:hover {
+  transform: translate(0, -.45rem) rotate(-1.7deg);
+  box-shadow: 10px 14px 0 rgba(24,52,58,.14);
+}
+
+.gallery-hit {
+  z-index: 8;
+  top: 0;
+  bottom: 0;
+  width: 18%;
+}
+
+.gallery-hit-prev { left: -1rem; }
+.gallery-hit-next { right: -1rem; }
+.gallery-hit-prev:hover { background: linear-gradient(90deg, rgba(24,52,58,.06), transparent); }
+.gallery-hit-next:hover { background: linear-gradient(270deg, rgba(24,52,58,.06), transparent); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-card { animation: note-drift 7s ease-in-out infinite; }
+  .note-stamp { animation: gentle-pulse 4s ease-in-out infinite; }
+}
+
+@keyframes note-drift {
+  0%, 100% { transform: translateY(0) rotate(2.5deg); }
+  50% { transform: translateY(-.4rem) rotate(2.1deg); }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@media (max-width: 800px) {
+  .photo-section .gallery-wrap { width: 100%; }
+  .photo-board { height: clamp(29rem, 120vw, 43rem); }
+  .photo-board .photo-frame,
+  .photo-board .photo-frame-one,
+  .photo-board .photo-frame-three { width: min(76vw, 33rem); }
+  .photo-board .photo-frame.is-next { transform: translate(2.7rem, 1.3rem) rotate(3deg) scale(.985); }
+  .photo-board .photo-frame.is-peek { transform: translate(5.2rem, 2.8rem) rotate(5.5deg) scale(.96); }
+}
+
+@media (max-width: 520px) {
+  .photo-board { height: clamp(25rem, 108vw, 32rem); }
+  .photo-board .photo-frame,
+  .photo-board .photo-frame-one,
+  .photo-board .photo-frame-three { width: 74vw; }
+  .photo-board .photo-frame.is-next { transform: translate(2rem, 1rem) rotate(3deg) scale(.98); }
+  .photo-board .photo-frame.is-peek { transform: translate(3.7rem, 2rem) rotate(5deg) scale(.95); }
+  .gallery-hit { width: 22%; }
+  .gallery-hit-prev { left: -.3rem; }
+  .gallery-hit-next { right: -.3rem; }
+}

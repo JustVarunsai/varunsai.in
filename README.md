@@ -11,7 +11,7 @@ Static site for `varunsai.in`, designed to deploy cleanly on GitHub Pages.
 - `debug/`: debug archive landing page
 - `styles.css`: shared styles
 - `script.js`: lightweight reveal and text rotation
-- `CNAME`: custom domain for GitHub Pages
+- `assets/gallery/`: named slots for personal images (ships without stock imagery)
 
 ## Preview locally
 
@@ -28,7 +28,7 @@ Then open `http://localhost:4173`.
 1. Push this folder to a GitHub repo.
 2. In the repo settings, set Pages to use `GitHub Actions`.
 3. Make sure the domain DNS points to GitHub Pages.
-4. The included `CNAME` file keeps `varunsai.in` attached to the deployment.
+4. Add a `CNAME` file containing `varunsai.in` only after the custom-domain claim is ready to be attached to this repository.
 
 ## DNS reminder
 
