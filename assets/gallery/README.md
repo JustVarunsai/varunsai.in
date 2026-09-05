@@ -1,11 +1,11 @@
-# Gallery slots
+# Personal photo roll
 
-Add three optimized images here (WebP or AVIF recommended):
+The five photographs already published on varunsai.in are retained here:
 
-- `funny.webp`: a playful / funny moment
-- `aesthetic.webp`: a place, object, or frame you love
-- `lately.webp`: an everyday photo that feels like you
+- `charminar.jpg`: Hyderabad architecture
+- `varun-portrait.jpg`: Varun’s portrait
+- `breakfast.jpg`: South Indian breakfast
+- `desk-robot.jpg`: desk with robot and computer
+- `dinner.jpg`: dinner table
 
-Then replace the three decorative `.photo-slot` figures in `index.html` with real `<img>` elements. Keep a short, meaningful `alt` description for each image.
-
-The site intentionally ships with visual placeholders instead of stock imagery, so it remains recognizably yours.
+Homepage thumbnails are in `index.html`; viewer titles, captions, and ordering are in the `photos` array in `script.js`. Keep both in sync when replacing or adding photos. Preserve meaningful alt descriptions and image dimensions. No stock or generated photos are used.

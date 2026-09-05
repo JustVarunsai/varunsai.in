@@ -1,77 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Working notes from Varun Sai on AI engineering, product edges, references, and questions worth keeping."
-    />
-    <title>Notes | Varun Sai</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="site-header" data-reveal>
-        <a class="brand" href="../" aria-label="Varun Sai home"><span class="brand-mark">VS</span><span><strong>Varun Sai</strong><small>AI engineer / builder</small></span></a>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="../#work">Work</a>
-          <a href="../builds/">Builds</a>
-          <a href="../debug/">Debug</a>
-          <a class="nav-cta" href="../#hello">Let’s build</a>
-        </nav>
-      </header>
-
-      <main>
-        <section class="page-intro" data-reveal>
-          <p class="eyebrow">/notes · engineering decisions</p>
-          <h1>Notes from the <span class="serif">work behind the work</span>.</h1>
-          <p>
-            A living record of product questions, agent workflows, system choices, and the decisions
-            that make software more useful in practice.
-          </p>
-          <div class="note-row">
-            <span class="note-pill">AI engineering</span>
-            <span class="note-pill">systems</span>
-            <span class="note-pill">references</span>
-          </div>
-        </section>
-
-        <section class="subpage-layout" data-reveal>
-          <article class="detail-card">
-            <h2>Why keep notes?</h2>
-            <ul>
-              <li>The final screen rarely explains the important part: the trade-offs.</li>
-              <li>Debugging trails and product constraints make better reference material than polished summaries.</li>
-              <li>A focused note can save a future builder an afternoon.</li>
-            </ul>
-          </article>
-
-          <article class="detail-card">
-            <h3>What I’m tracking</h3>
-            <p>
-              MCP patterns, RAG quality, privacy in AI workflows, and what makes an automation
-              feel like a thoughtful product rather than a complicated shortcut.
-            </p>
-            <div class="closing-links">
-              <a href="../">Back home</a>
-              <a href="https://github.com/JustVarunsai" target="_blank" rel="noreferrer">Browse the code</a>
-            </div>
-          </article>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <p>© <span data-year></span> Varun Sai. Notes stay because they reduce future confusion.</p>
-      </footer>
-    </div>
-
-    <script src="../script.js"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <meta name="description" content="Short notes from Varun Sai on product thinking, human control in AI workflows, and the details that make software useful.">
+  <meta property="og:title" content="Varun Sai | Built with GPT Astra"><meta property="og:description" content="Product-minded software development & AI engineering. AI workflows, internal tools, and useful interfaces."><meta property="og:type" content="website">
+  <meta property="og:image" content="https://varunsai.in/assets/gallery/desk-robot.jpg">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"><script src="/script.js" defer></script>
+<title>Margin notes | Varun Sai</title><link rel="canonical" href="https://varunsai.in/notes/"></head><body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+  <a class="wordmark" href="/" aria-label="Varun Sai home">varun<br>sai<span>✳</span></a>
+  <span class="header-note">Independent thinking.<br>Useful software.</span>
+  <nav aria-label="Main navigation"><a href="/#workbench">Workbench</a><a href="/notes/">Notes</a><a href="/#life">Life lately</a><a class="nav-contact" href="/#hello">Say hello</a></nav>
+</header><main id="main" class="wrap"><section class="page-intro"><p class="eyebrow">THE NOTEBOOK / THREE SMALL PRINCIPLES</p><h1>Thoughts in<br>the <em>margins.</em></h1><p>A few principles behind the way I want to build. Short enough to keep in mind when the work gets complicated.</p></section><div class="article-layout"><nav class="article-nav" aria-label="In this notebook"><span class="mono">IN THIS NOTEBOOK</span><a href="#next-action">01 · The next action</a><a href="#exit">02 · A way out</a><a href="#waiting">03 · The waiting</a></nav><div>
+<article class="essay" id="next-action"><span class="eyebrow">01 / PRODUCT THINKING</span><h2>Start with the next action.</h2><p>Before choosing the model, the framework, or the screen, I want to know what someone is trying to do next.</p><p>“Answer questions about our documents” is a capability. “Help a new teammate find the right onboarding step” is a direction. That difference changes what needs to be retrieved, what an answer should look like, and whether AI is useful at all.</p><p>The first version can be small: one person, one recurring question, one answer they can check. Watch what happens after the answer. That is where the product starts to become clear.</p><aside>A question I keep nearby: what will someone be able to do after this that they couldn’t do before?</aside><a class="text-link" href="/#workbench">Try this in the workbench</a></article>
+<article class="essay" id="exit"><span class="eyebrow">02 / HUMAN × AI</span><h2>Give automation an exit.</h2><p>An automation should have a good answer to “wait, that’s wrong.”</p><p>That might mean an original document beside an extracted field, a review queue for uncertain messages, or a way to undo a changed label. The useful part is giving the person enough context and control to recover.</p><p>I like separating a suggestion from an action. Suggesting a reply is different from sending it. Showing a possible answer is different from updating a record. Each boundary deserves a deliberate decision.</p><aside>Make the correction path as easy to find as the happy path.</aside></article>
+<article class="essay" id="waiting"><span class="eyebrow">03 / THE SMALL DETAILS</span><h2>Make the waiting useful.</h2><p>A system can be doing the right thing and still leave someone wondering whether anything is happening.</p><p>A useful waiting state explains what is underway, preserves what the person entered, and gives them a way to stop. If there is a delay, the interface should help them decide what to do with it.</p><p>Small touches can bring some warmth, too. The little guide on this site follows a scroll and then settles down. It is there when you want a detour, with a pause button when you don’t.</p><aside>Personality is welcome. The person using the product still gets the last word.</aside><button type="button" class="text-link" data-open-guide>Meet the little guide</button></article>
+</div></div></main><footer class="site-footer wrap"><a class="footer-signature" href="/">Varun Sai<span>Built with GPT Astra</span></a><div class="footer-links"><a class="social-link" href="https://www.linkedin.com/in/varunsaibandi/" target="_blank" rel="noreferrer"><svg class="social-icon linkedin-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="3" fill="currentColor"/><circle cx="5.8" cy="6" r="1.8" fill="var(--white)"/><path d="M4.2 9.3h3.2v10.5H4.2zM10 9.3h3.1v1.4c.6-1 1.7-1.7 3.2-1.7 3.4 0 3.7 2.2 3.7 5v5.8h-3.2v-5.2c0-1.3 0-2.9-1.8-2.9s-1.9 1.4-1.9 2.8v5.3H10z" fill="var(--white)"/></svg><span>LinkedIn</span></a><a class="social-link" href="https://github.com/JustVarunsai" target="_blank" rel="noreferrer"><svg class="social-icon github-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297C5.37.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.467-1.333-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.628-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.595 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>GitHub</span></a><a href="/notes/">Notes</a><button type="button" data-open-guide>Meet the little guide</button></div><span class="copyright">© <span data-year>2026</span> · A work in progress, always.</span></footer></body></html>
